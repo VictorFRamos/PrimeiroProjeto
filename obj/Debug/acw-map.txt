@@ -1,0 +1,8 @@
+PrimeiroProjeto.MainActivity, PrimeiroProjeto;md503442c3deaaf35b7e5fcfbb2357652e4.MainActivity
+PrimeiroProjeto.MainActivity, PrimeiroProjeto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md503442c3deaaf35b7e5fcfbb2357652e4.MainActivity
+PrimeiroProjeto.MainActivity;md503442c3deaaf35b7e5fcfbb2357652e4.MainActivity
+primeiroprojeto.MainActivity;md503442c3deaaf35b7e5fcfbb2357652e4.MainActivity
+PrimeiroProjeto.LoginActivity, PrimeiroProjeto;md503442c3deaaf35b7e5fcfbb2357652e4.LoginActivity
+PrimeiroProjeto.LoginActivity, PrimeiroProjeto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md503442c3deaaf35b7e5fcfbb2357652e4.LoginActivity
+PrimeiroProjeto.LoginActivity;md503442c3deaaf35b7e5fcfbb2357652e4.LoginActivity
+primeiroprojeto.LoginActivity;md503442c3deaaf35b7e5fcfbb2357652e4.LoginActivity
