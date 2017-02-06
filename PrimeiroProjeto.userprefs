@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{1E3BAE38-68B7-40BB-B35A-1A95FC14A6ED}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.Debugging.targets" line="283" column="2" />
+      <Breakpoint file="C:\Users\victo\Documents\Projects\PrimeiroProjeto\PrimeiroProjeto\Resources\utils\Utils.cs" line="43" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.PrimeiroProjeto AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Holo.Light.DarkActionBar" PreferredExecutionTarget="Android.0027183217" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PrimeiroProjeto\Resources\services\Account.cs">
+    <Files>
+      <File FileName="PrimeiroProjeto\Resources\Resource.designer.cs" Line="1" Column="1" />
+      <File FileName="PrimeiroProjeto\Resources\MainActivity.cs" Line="50" Column="65" />
+      <File FileName="PrimeiroProjeto\Resources\utils\Utils.cs" Line="43" Column="1" />
+      <File FileName="PrimeiroProjeto\Resources\services\Account.cs" Line="28" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
