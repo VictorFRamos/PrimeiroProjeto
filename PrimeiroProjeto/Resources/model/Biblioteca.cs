@@ -18,19 +18,28 @@ namespace PrimeiroProjeto.Resources.model
 
         public static Sessao sessao { get; set; }
 
-		public static void SetSessao(string id,string nome,string email)
+		static string Token { get; set; }
+
+		public static void SetSessao(UsuarioDTO usu)
 		{
-			sessao = new Sessao { UserID = id, UserEmail = email, UserName = nome };
+			sessao = new Sessao { Usuario = usu};
+		}
+
+		public static void SetToken(string t)
+		{
+			Token = t;
+		}
+
+		public static string GetToken()
+		{
+			return Token;
 		}
     }
 
     public class Sessao
     {
-        public string UserID { get; set; }
-        public string UserName { get; set; }
-        public string UserEmail { get; set; }
-        public string Token { get; set; }
-        public DateTime Expire { get; set; }
+		public UsuarioDTO Usuario { get; set; }
+        
     }
 
 }

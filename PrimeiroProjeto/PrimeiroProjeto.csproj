@@ -51,6 +51,25 @@
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.105.2.3\lib\MonoAndroid10\RestSharp.dll</HintPath>
     </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.2\lib\MonoAndroid\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.lib.e_sqlite3">
+      <HintPath>..\packages\SQLitePCLRaw.lib.e_sqlite3.android.1.1.2\lib\MonoAndroid\SQLitePCLRaw.lib.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.android.1.1.2\lib\MonoAndroid\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.2\lib\MonoAndroid\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.2\lib\MonoAndroid\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\model\Biblioteca.cs" />
@@ -62,6 +81,7 @@
     <Compile Include="Resources\model\RegisterDTO.cs" />
     <Compile Include="Resources\MainActivity.cs" />
     <Compile Include="Resources\controllers\LoginActivity.cs" />
+    <Compile Include="Resources\model\Context.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -83,5 +103,12 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
     <Folder Include="Resources\controllers\" />
   </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\SQLitePCL.raw_basic.0.8.6\build\MonoAndroid\SQLitePCL.raw_basic.targets" Condition="Exists('..\packages\SQLitePCL.raw_basic.0.8.6\build\MonoAndroid\SQLitePCL.raw_basic.targets')" />
 </Project>

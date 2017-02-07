@@ -31,10 +31,7 @@ namespace PrimeiroProjeto
 				var result = Account.Register(model);
 				if (!result.Erro)
 				{
-					Biblioteca.SetSessao(result.Usuario.Id, result.Usuario.Nome, result.Usuario.Email);
 					var loginActivity = new Intent(this, typeof(LoginActivity));
-					var sessaoObject = JsonConvert.SerializeObject(Biblioteca.sessao);
-					loginActivity.PutExtra("Sessao", sessaoObject);
 					StartActivity(loginActivity);			
 				}
 				else {
@@ -46,11 +43,13 @@ namespace PrimeiroProjeto
 				var Email = FindViewById<EditText>(Resource.Id.email).Text;
 				var Password = FindViewById<EditText>(Resource.Id.senha).Text;
 
-				var result = Account.LogIn(Email,Password);
-				var loginActivity = new Intent(this, typeof(LoginActivity));
-				var sessaoObject = JsonConvert.SerializeObject(result);
-				loginActivity.PutExtra("Sessao", sessaoObject);
-				StartActivity(loginActivity);
+				if (Account.LogIn(Email, Password))
+				{
+					var loginActivity = new Intent(this, typeof(LoginActivity));
+					var sessaoObject = JsonConvert.SerializeObject(Biblioteca.sessao);
+					loginActivity.PutExtra("Sessao", sessaoObject);
+					StartActivity(loginActivity);
+				}
 			};
 		}
 

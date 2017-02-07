@@ -1,19 +1,43 @@
-﻿<Properties StartupConfiguration="{1E3BAE38-68B7-40BB-B35A-1A95FC14A6ED}|Default">
+﻿<Properties StartupConfiguration="{1E3BAE38-68B7-40BB-B35A-1A95FC14A6ED}|Default" GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.Debugging.targets" line="283" column="2" />
-      <Breakpoint file="C:\Users\victo\Documents\Projects\PrimeiroProjeto\PrimeiroProjeto\Resources\utils\Utils.cs" line="43" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.PrimeiroProjeto AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Holo.Light.DarkActionBar" PreferredExecutionTarget="Android.0027183217" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PrimeiroProjeto\Resources\services\Account.cs">
+  <MonoDevelop.Ide.ItemProperties.PrimeiroProjeto AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Holo.Light.DarkActionBar" PreferredExecutionTarget="Android.Moto_G_1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PrimeiroProjeto Status">
     <Files>
       <File FileName="PrimeiroProjeto\Resources\Resource.designer.cs" Line="1" Column="1" />
-      <File FileName="PrimeiroProjeto\Resources\MainActivity.cs" Line="50" Column="65" />
-      <File FileName="PrimeiroProjeto\Resources\utils\Utils.cs" Line="43" Column="1" />
-      <File FileName="PrimeiroProjeto\Resources\services\Account.cs" Line="28" Column="15" />
+      <File FileName="PrimeiroProjeto\Resources\controllers\LoginActivity.cs" Line="19" Column="37" />
+      <File FileName="PrimeiroProjeto\Resources\utils\Utils.cs" Line="25" Column="24" />
+      <File FileName="PrimeiroProjeto\SQLite.cs" Line="1" Column="1" />
+      <File FileName="PrimeiroProjeto\SQLiteAsync.cs" Line="1" Column="1" />
+      <File FileName="PrimeiroProjeto\Resources\model\Context.cs" Line="22" Column="6" />
+      <File FileName="PrimeiroProjeto\Resources\model\AccountBindingModels.cs" Line="75" Column="15" />
+      <File FileName="PrimeiroProjeto\Resources\model\RegisterDTO.cs" Line="19" Column="20" />
+      <File FileName="PrimeiroProjeto\Resources\services\Account.cs" Line="45" Column="37" />
+      <File FileName="PrimeiroProjeto\Resources\model\Biblioteca.cs" Line="22" Column="3" />
+      <File FileName="PrimeiroProjeto\Resources\MainActivity.cs" Line="47" Column="6" />
+      <File FileName="PrimeiroProjeto Status" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PrimeiroProjeto" expanded="True" selected="True">
+            <Node name="PrimeiroProjeto" expanded="True">
+              <Node name="ComponentReferenceFolder" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="controllers" expanded="True" />
+                <Node name="model" expanded="True" />
+                <Node name="services" expanded="True" />
+                <Node name="utils" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
 </Properties>

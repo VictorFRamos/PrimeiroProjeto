@@ -29,9 +29,9 @@ namespace PrimeiroProjeto
 
 			TextView t = FindViewById<TextView>(Resource.Id.textViewName);
 
-			if (Sessao != null && Sessao.UserName != null)
+			if (Sessao != null && Sessao != null)
 			{
-				t.Text = "Bem vindo " + Sessao.UserName;
+				t.Text = "Bem vindo " + Sessao.Usuario.Nome;
 			}
 		}
 	}

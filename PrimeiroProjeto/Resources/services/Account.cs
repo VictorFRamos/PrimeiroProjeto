@@ -13,13 +13,15 @@ using PrimeiroProjeto.Resources.model;
 using PrimeiroProjeto.Resources.utils;
 using Newtonsoft.Json;
 using RestSharp;
-
+using SQLite;
 
 namespace PrimeiroProjeto.Resources.services
 {
-    public class Account
+    public class Account 
     {
-		public static Sessao LogIn(string email, string senha)
+		public static Context ctx = new Context();
+
+		public static bool LogIn(string email, string senha)
 		{
 			LoginSend login = new LoginSend { grant_type = "password", password = senha, username = email };
 		
@@ -28,27 +30,30 @@ namespace PrimeiroProjeto.Resources.services
 					Utils.Json(Method.POST,"/Token", login,false, null)
 				);
 
+			Biblioteca.SetToken(retorno.access_token);
+
 			if (retorno != null)
 			{
-				RootObject userinfo = JsonConvert
-					.DeserializeObject<RootObject>(
-						Utils.Json(Method.GET, "/api/Account/UserInfo", null, true, retorno.access_token)
+				UsuarioDTO userinfo = JsonConvert
+					.DeserializeObject<UsuarioDTO>(
+						Utils.Json(Method.GET, "/api/Account/UserInfo", null, true, Biblioteca.GetToken())
 					);
 
 				if (userinfo != null)
 				{
-					Biblioteca.SetSessao("", userinfo.Email, userinfo.Email);
+					AddOrUpdate(userinfo);
+					Biblioteca.SetSessao(userinfo);
 
-					return Biblioteca.sessao;
+					return true;
 				}
 				else 
 				{
-					return new Sessao();
+					return false;
 				}
 			}
 			else 
 			{
-				return new Sessao();
+				return false;
 			}
 		}
 	
@@ -61,7 +66,62 @@ namespace PrimeiroProjeto.Resources.services
 		}
 
 
+		public static bool AddOrUpdate(UsuarioDTO objeto)
+		{
+			try
+			{
+				using (var db = new SQLiteConnection(ctx.conn))
+				{
+					var usu = db.Table<UsuarioDTO>().Where(x => x.Email == objeto.Email).FirstOrDefault();
 
-       
+					if (usu != null)
+					{
+						try
+						{
+							usu.Nome = objeto.Nome;
+							usu.Telefone = objeto.Telefone;
+							db.Update(objeto);
+							return true;
+						}
+						catch(Exception e)
+						{ 
+							return false;
+						}
+
+					}
+					else 
+					{
+						try
+						{
+							db.Insert(objeto);
+							return true;
+						}
+						catch (Exception exe)
+						{
+							return false;
+						}
+					}
+				}
+			}
+			catch (SQLiteException ex)
+			{
+				return false;
+			}
+		}
+
+		public static List<Users> Select()
+		{
+			try
+			{
+				using (var connection = new SQLiteConnection(ctx.conn))
+				{
+					return connection.Table<Users>().ToList();
+				}
+			}
+			catch (SQLiteException ex)
+			{
+				return null;
+			}
+		} 
     }
 }
